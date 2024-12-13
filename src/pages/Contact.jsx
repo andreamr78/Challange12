@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Alert from 'react-bootstrap/Alert';
+import { data } from 'react-router-dom';
 
 function Contact() {
   const [validated, setValidated] = useState(false);
@@ -32,7 +33,7 @@ function Contact() {
       setShow(true);
     }
     setValidated(true);
-      if (validated) {
+      if (validated && name !=='' && email!=='' & message !=='') {
         handleReset();
       }
   }
